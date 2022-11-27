@@ -3,8 +3,8 @@ from .models import Staff, Staff_Grade
 
 # Create your views here.
 def index(request):
-    staff=Staff.objects.all()
+    staffs=Staff.objects.all()
     context={
-        'staff':staff
+        'staff':staffs
     }
     return render(request, 'Home.html', context)
